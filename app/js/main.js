@@ -17,6 +17,7 @@ import './src/widgets/accord';
 
 import './src/widgets/popups';
 import './src/widgets/video-link';
+import './src/widgets/mobile-menu';
 
 import './src/widgets/inputs/numeric-input';
 import './src/widgets/inputs/masked-input';
