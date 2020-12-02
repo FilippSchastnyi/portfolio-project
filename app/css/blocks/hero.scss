@@ -1,3 +1,230 @@
 .hero {
+  position: relative;
+  min-height: 100vh;
 
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  &__nav {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+  }
+
+  &__box {
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+    z-index: 5;
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    @include tablet-and-mobile {
+      bottom: 30px;
+      left: 20px;
+    }
+    @include mobile {
+      bottom: 20px;
+      left: 15px;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-bottom: 182px;
+    @include smallTablet-and-mobile {
+      padding-bottom: 140px;
+    }
+    @include desktop-small-height {
+      padding-bottom: 120px;
+    }
+    @include mobile {
+      padding-bottom: 90px;
+    }
+  }
+
+  &__top{
+    max-width: 660px;
+  }
+
+  &__title {
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 52px;
+    line-height: 62px;
+    color: $color-dark;
+    @include smallTablet-and-mobile {
+      font-size: 46px;
+      line-height: 48px;
+    }
+    @include desktop-small-height {
+      max-width: 500px;
+      font-size: 32px;
+      line-height: 38px;
+    }
+    @include mobile {
+      max-width: 500px;
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+
+  &__text {
+    margin-top: 25px;
+    color: $color-gray;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 36px;
+    @include smallTablet-and-mobile {
+      margin-top: 15px;
+    }
+    @include desktop-small-height {
+      font-size: 18px;
+      margin-top: 10px;
+      line-height: 24px;
+    }
+    @include mobile {
+      font-size: 18px;
+      margin-top: 10px;
+      line-height: 24px;
+    }
+  }
+
+  &__cta-btn {
+    margin-top: 40px;
+    @include smallTablet-and-mobile {
+      margin-top: 30px;
+    }
+    @include desktop-small-height {
+      margin-top: 30px;
+    }
+    @include mobile {
+      margin-top: 20px;
+    }
+
+    .btn {
+      padding: 11px 54px;
+
+      @include mobile {
+        padding: 10px 32px;
+      }
+    }
+  }
+
+  //design background
+  &__triangle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    @include desktop-small-height {
+      max-width: 500px;
+    }
+
+    @include tablet-and-mobile {
+      max-width: 500px;
+    }
+
+    @include smallTablet-and-mobile {
+      display: none;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__grid {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    @include desktop-small-height {
+      max-width: 500px;
+      max-height: 300px;
+    }
+
+    @include tablet-and-mobile {
+      max-width: 500px;
+      max-height: 300px;
+    }
+
+    @include smallTablet-and-mobile {
+      display: none;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // slider settings //
+  &__swiper-container {
+    position: relative;
+  }
+
+  &__slide {
+    width: 100%;
+    height: 100vh;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      @include tablet-and-mobile {
+        object-position: 70% 0;
+      }
+    }
+  }
+
+  &__next-btn, &__prev-btn {
+    cursor: pointer;
+    position: relative;
+    width: 45px;
+    height: 45px;
+    background: $color-white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    .arrow {
+      @include align(true, true);
+      transition: all 0.1s ease-in;
+    }
+
+    &:hover {
+      .arrow {
+        width: 28px;
+        transition: all 0.1s ease;
+      }
+    }
+  }
+
+  &__next-btn {
+    transform: rotate(180deg);
+  }
 }

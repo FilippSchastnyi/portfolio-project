@@ -8,12 +8,12 @@ html {
 }
 
 .container {
-  width: $desktopWidth + $desktopGutter * 2;
-  max-width: 100%;
+  padding: 0 40px;
+  max-width: 1660px;
   margin-right: auto;
   margin-left: auto;
-  padding-left: $desktopGutter;
-  padding-right: $desktopGutter;
+
+
 
   @include tablet {
     padding-left: $tabletGutter;

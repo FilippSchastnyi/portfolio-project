@@ -9,12 +9,14 @@ import 'lazysizes/plugins/native-loading/ls.native-loading';
 import 'lazysizes/plugins/object-fit/ls.object-fit';
 import svgPolyfill from 'svg4everybody';
 import jquery from 'jquery';
-import swiper from 'swiper';
+import swiper, { Navigation, Autoplay, EffectFade } from 'swiper';
 import imask from 'imask';
 import datepicker from 'js-datepicker';
 import { format as dateFormat } from 'date-fns';
 import select2 from 'select2';
 import PerfectScrollbar from 'perfect-scrollbar';
+
+swiper.use([Navigation, Autoplay, EffectFade]);
 
 window.$ = window.jQuery = jquery;
 window.svg4everybody = svgPolyfill;

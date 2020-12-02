@@ -1,6 +1,28 @@
 .page {
   display: flex;
   justify-content: center;
+  position: relative;
+
+  &__aside{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: rgba(243,249,255,0.8);
+    &.open{
+      transform: translateX(0);
+      transition: all 0.3s ease;
+    }
+    @include mobile{
+      width: 240px;
+    }
+  }
 
   &__inner {
     display: flex;

@@ -1,8 +1,59 @@
 .header {
+  padding-top: 20px;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  @include desktop-small-height{
+    padding-top: 10px;
+  }
+
+  @include mobile{
+    padding-top: 10px;
+  }
 
   &__wrapper {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    @include mobile{
+      justify-content: space-between;
+    }
+  }
+
+  &__cta-btn {
+    .btn {
+      position: relative;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 33px;
+      @include desktop-small-height {
+        padding: 10px 15px;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      @include mobile {
+        padding: 10px 15px;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .icon {
+        @include sprite('phone');
+        margin-right: 22px;
+        svg{
+          @include mobile {
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  &__burger {
+    margin-left: 30px;
   }
 }

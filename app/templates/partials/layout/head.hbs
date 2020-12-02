@@ -67,9 +67,14 @@
         "@id": "{{ page-url }}"
       }
     }
+
   </script>
 </head>
 
 <body class="page {{page-mod}} {{page-class}}">
 <div class="preloader js-preloader"></div>
+<div class="page__aside js-aside">
+  {{>common/side-bar}}
+</div>
+
 <div class="page__inner">
