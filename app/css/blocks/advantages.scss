@@ -1,3 +1,12 @@
 .advantages {
 
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__cell{
+    flex: 1 1 50%;
+  }
+
 }

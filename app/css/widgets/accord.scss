@@ -1,0 +1,75 @@
+.accord {
+
+  &-option {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(206, 206, 206, 0.7);
+    border-radius: 10px;
+
+    &__item {
+      position: relative;
+      padding: 20px 80px 20px 0;
+      width: 100%;
+      font-size: 28px;
+      line-height: 36px;
+      color: $color-gray;
+      transition: 0.3s all ease;
+      @include mobile {
+        padding: 10px 40px 10px 0;
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      &:after, &:before {
+        content: "";
+        position: absolute;
+        top: 45%;
+        right: 0;
+        width: 32px;
+        height: 4px;
+        background-color: $color-black;
+        transition: 0.3s all ease;
+        @include mobile {
+          top: 50%;
+          width: 24px;
+        }
+      }
+
+      &:before {
+        transform: rotate(90deg);
+      }
+
+      &:hover {
+        transition: 0.3s all ease;
+      }
+    }
+
+    &__content {
+      font-size: 18px;
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+
+    &__inner {
+      height: 0;
+      display: none;
+    }
+
+    &.open {
+      .accord-option__inner {
+        display: block;
+      }
+
+      .accord-option__item {
+        &:before, &:after {
+          transform: rotate(45deg);
+          transition: 0.3s all ease;
+        }
+
+        &:after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}

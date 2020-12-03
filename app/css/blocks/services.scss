@@ -2,10 +2,10 @@
 
   &__grid {
     margin-top: 60px;
-    @include smallTablet-and-mobile{
+    @include smallTablet-and-mobile {
       margin-top: 40px;
     }
-    @include mobile{
+    @include mobile {
       margin-top: 30px;
     }
   }
@@ -39,7 +39,5 @@
       margin: 15px 0 0 0;
       min-height: auto;
     }
-
-
   }
 }
