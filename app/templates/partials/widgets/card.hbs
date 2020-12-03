@@ -1,0 +1,24 @@
+<a href="#"
+  class="card
+    {{#ifCond card "purple"}} card--purple {{/ifCond}}
+    {{#ifCond card "emerald"}} card--emerald {{/ifCond}}
+    {{#ifCond card "blue"}} card--blue {{/ifCond}}
+    {{#ifCond card "brown"}} card--brown {{/ifCond}}
+    {{#ifCond card "red"}} card--red {{/ifCond}}
+    {{#ifCond card "green"}} card--green{{/ifCond}}
+    {{#ifCond card "gray"}} card--gray {{/ifCond}}
+">
+  <div class="card__wrapper {{#ifCond card-reverse "true"}}card__wrapper--reverse{{/ifCond}}{{#ifCond card-column "true"}} card__wrapper--column{{/ifCond}}">
+    <div class="card__left {{#ifCond text-align "start"}} card__left--flex-start {{/ifCond}}">
+      {{#ifCond card-bg "true"}}
+        <div class="card__bg">
+          {{>components/image img="services/cards-bg/bg" ext="png"}}
+        </div> {{/ifCond}}
+      <p class="card__text">{{text}}</p>
+    </div>
+    <div class="card__right">
+      {{>components/image img=image ext="png"}}
+    </div>
+  </div>
+</a>
+

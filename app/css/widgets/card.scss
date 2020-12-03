@@ -1,0 +1,119 @@
+.card {
+  flex: 1 1 100%;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px rgba(67, 64, 64, 0.25);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  &:hover{
+    transform: translateY(-4px);
+    transition: all 0.5s ease;
+    box-shadow: -2px 15px 47px -10px #000000;
+
+    .card__right{
+      img{
+        width: 110%;
+        height: 110%;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    min-height: 100%;
+    &--reverse{
+      flex-direction: row-reverse;
+    }
+    &--column{
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    flex: 1 1 70%;
+    padding: 50px;
+    position: relative;
+    &--flex-start{
+      align-items: flex-start;
+    }
+    @include mobile{
+      padding: 25px;
+    }
+  }
+
+  &__bg{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+  }
+
+  &__right {
+    flex: 0 1 30%;
+    min-height: 100%;
+    position: relative;
+    padding-top: 35%;
+    top: 0;
+    left: 0;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 0px 10px 10px 0px;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &__text {
+    font-size: 28px;
+    line-height: 36px;
+    color: $color-white;
+    @include mobile{
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &--purple {
+    background: linear-gradient(180deg, #27214A 0%, rgba(118, 110, 162, 0) 100%), #27214A;
+    box-shadow: 0px 0px 15px rgba(67, 64, 64, 0.25);
+  }
+
+  &--emerald {
+    background: linear-gradient(180deg, #225238 0%, rgba(61, 140, 98, 0) 100%), #225238;
+    box-shadow: 0px 0px 15px rgba(67, 64, 64, 0.25);
+  }
+
+  &--blue {
+    background: linear-gradient(180deg, #467992 0%, rgba(255, 255, 255, 0) 100%), #467992;
+  }
+
+  &--brown {
+    background: linear-gradient(180deg, #A67B49 0%, rgba(233, 195, 152, 0) 100%), #A67B49;
+  }
+
+  &--brown {
+    background: linear-gradient(180deg, #A67B49 0%, rgba(233, 195, 152, 0) 100%), #A67B49;
+  }
+
+  &--red {
+    background: linear-gradient(180deg, #462027 0%, rgba(153, 89, 100, 0) 100%), #462027;
+  }
+
+  &--green {
+    background: #1D3A3A;
+  }
+
+  &--gray {
+    background: linear-gradient(180deg, #617781 0%, rgba(255, 255, 255, 0) 100%), #617781;
+  }
+}

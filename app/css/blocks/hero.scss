@@ -57,7 +57,7 @@
     }
   }
 
-  &__top{
+  &__top {
     max-width: 660px;
   }
 
@@ -120,7 +120,6 @@
 
     .btn {
       padding: 11px 54px;
-
       @include mobile {
         padding: 10px 32px;
       }
@@ -136,11 +135,9 @@
     @include desktop-small-height {
       max-width: 500px;
     }
-
     @include tablet-and-mobile {
       max-width: 500px;
     }
-
     @include smallTablet-and-mobile {
       display: none;
     }
@@ -161,12 +158,10 @@
       max-width: 500px;
       max-height: 300px;
     }
-
     @include tablet-and-mobile {
       max-width: 500px;
       max-height: 300px;
     }
-
     @include smallTablet-and-mobile {
       display: none;
     }

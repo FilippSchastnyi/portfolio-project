@@ -2,14 +2,74 @@
   <div class="container">
     <h3 class="section__title">Наши услуги</h3>
     <div class="services__grid">
-      <div class="services__row">
 
+      <div class="services__row">
+        <div class="services__cell ">
+          {{>widgets/card
+            card = "purple"
+            image= "services/services_1"
+            text = "Информационные услуги в области безопасности"
+          }}
+        </div>
+        <div class="services__cell">
+          {{>widgets/card
+            card = "emerald"
+            image= "services/services_2"
+            text = "Услуги по обеспечению безопасности"
+            text-align = "start"
+            card-bg = "true"
+          }}
+        </div>
       </div>
-      <div class="services__row">
 
+      <div class="services__row">
+        <div class="services__cell">
+          {{>widgets/card
+            card = "blue"
+            image= "services/services_3"
+            text = "Услуги в области трудовых отношений"
+            text-align = "start"
+            card-bg = "true"
+            card-reverse = "true"
+          }}
+        </div>
+        <div class="services__cell">
+          {{>widgets/card
+            card = "brown"
+            image= "services/services_4"
+            text = "Услуги в области трудовых отношений"
+            card-reverse = "true"
+          }}
+        </div>
+        <div class="services__cell">
+          {{>widgets/card
+            card = "red"
+            image= "services/services_5"
+            text = "Услуги в области маркетинга"
+            card-column = "true"
+          }}
+        </div>
       </div>
-      <div class="services__row">
 
+      <div class="services__row">
+        <div class="services__cell">
+          {{>widgets/card
+            card = "green"
+            image= "services/services_6"
+            text = "Информационные услуги в области безопасности"
+            card-reverse = "true"
+          }}
+        </div>
+        <div class="services__cell">
+          {{>widgets/card
+            card = "gray"
+            image= "services/services_7"
+            text = "Информационные услуги в области безопасности"
+            card-reverse = "true"
+            card-bg = "true"
+            text-align = "start"
+          }}
+        </div>
       </div>
     </div>
   </div>
