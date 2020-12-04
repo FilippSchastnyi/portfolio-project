@@ -1,12 +1,51 @@
 .advantages {
+  text-align: center;
+  @include mobile{
+   text-align: left;
+  }
+
+  &__accord {
+    margin-top: 60px;
+    @include mobile {
+      margin-top: 45px;
+    }
+  }
 
   &__grid {
     display: flex;
     flex-wrap: wrap;
+    @include tablet-and-mobile {
+      flex-direction: column;
+    }
   }
 
-  &__cell{
-    flex: 1 1 50%;
+  &__col-left {
+    flex: 0 1 calc(100% / 2 - 15px);
+    margin-right: 15px;
+    @include tablet-and-mobile {
+      margin-right: 0;
+      flex: 1 1 100%;
+      margin-bottom: 15px;
+    }
   }
 
+  &__col-right {
+    flex: 0 1 calc(100% / 2 - 15px);
+    margin-left: 15px;
+    @include tablet-and-mobile {
+      margin-left: 0;
+      flex: 1 1 100%;
+    }
+  }
+
+  &__cell {
+    margin-bottom: 30px;
+    @include tablet-and-mobile {
+      margin-bottom: 15px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

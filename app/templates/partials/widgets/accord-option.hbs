@@ -1,6 +1,16 @@
 <div class="accord-option js-accord-option">
   <button class="accord-option__item js-accord-button">
-    {{{label}}}
+    <div class="accord-option__wrapper">
+    <div class="accord-option__left">
+      {{>ui/svg name = image}}
+      <span class="accord-option__label">
+      {{{label}}}
+      </span>
+    </div>
+    <div class="accord-option__right">
+      {{>ui/svg name = "plus"}}
+    </div>
+    </div>
   </button>
   <div class="accord-option__inner js-accord-content">
     <p class="accord-option__content">
