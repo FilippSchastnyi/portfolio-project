@@ -251,7 +251,7 @@
 }
 
 @mixin desktop-small-height {
-  @media(max-height: 750px) and (min-width: $mobileMedia + 1) {
+  @media(max-height: 700px) and (min-width: $mobileMedia + 1) {
     @content;
   }
 }
