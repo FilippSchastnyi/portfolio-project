@@ -1,21 +1,38 @@
 .header {
   padding-top: 20px;
+  padding-bottom: 20px;
   position: absolute;
   z-index: 100;
   width: 100%;
-  @include desktop-small-height{
+  @include desktop-small-height {
     padding-top: 10px;
   }
 
-  @include mobile{
+  @include mobile {
     padding-top: 10px;
+  }
+
+  &.pre-fixed {
+    position: fixed;
+    background-color: #fff;
+    top: -150px;
+    box-shadow: 0 60px 120px rgba(0,0,0,.1), 0 15px 50px rgba(0,0,0,.03);
+    transition: 0.5s all ease-in-out;
+  }
+
+  &.fixed {
+    position: fixed;
+    background-color: #fff;
+    box-shadow: 0 60px 120px rgba(0,0,0,.1), 0 15px 50px rgba(0,0,0,.03);
+    transition: 0.5s all ease-in-out;
+    top: 0;
   }
 
   &__wrapper {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    @include mobile{
+    @include mobile {
       justify-content: space-between;
     }
   }
@@ -44,7 +61,8 @@
       .icon {
         @include sprite('phone');
         margin-right: 22px;
-        svg{
+
+        svg {
           @include mobile {
             width: 20px;
           }
