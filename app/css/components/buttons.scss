@@ -48,6 +48,12 @@
     }
   }
 
+  &--white{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.25);
+    color: $color-black;
+  }
+
   &--small {
     padding: 8px 10px;
     font-size: 14px;

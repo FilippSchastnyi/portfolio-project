@@ -1,8 +1,21 @@
 <section class="section contacts">
   <div class="container">
     <div class="contacts__wrapper">
-      <div class="contacts__left"></div>
-      <div class="contacts__right"></div>
+      <div class="contacts__left">
+       <div class="contacts__inner">
+         <a class="section__title contacts__title">Контакты</a>
+         <p class="contacts__feedback">Телефон:<a href="#" class="contacts__link"> +375 26 909-00-00</a></p>
+         <p class="contacts__feedback">Емейл:<a href="#" class="contacts__link"> example@gmail.com</a></p>
+         <p class="contacts__feedback">Адрес:<span class="contacts__address"> 279987 г. Минск, ул. Октябрьская, 65, оф. 678</span></p>
+       </div>
+      </div>
+      <div class="contacts__right">
+        <span class="contacts__text">Хотите получить консультацию?</span>
+        {{>common/form}}
+      </div>
     </div>
+  </div>
+  <div class="contacts__bg">
+    {{>components/image img="contacts/bg" ext="png"}}
   </div>
 </section>

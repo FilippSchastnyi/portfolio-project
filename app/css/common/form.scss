@@ -1,0 +1,84 @@
+.form {
+
+  &__cell {
+    margin-top: 30px;
+    position: relative;
+    @include mobile{
+      margin-top: 20px;
+    }
+
+    input {
+      &:focus ~ label, &:valid ~ label {
+        top: -25px;
+        font-size: 14px;
+        line-height: 28px;
+        color: $color-white;
+      }
+    }
+
+    label {
+      color: $color-white;
+      font-size: 18px;
+      font-weight: normal;
+      position: absolute;
+      pointer-events: none;
+      left: 0;
+      top: 0;
+      transition: 0.2s ease all;
+    }
+  }
+
+  input {
+    width: 100%;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 0.5px solid $color-white;
+    color: $color-white;
+    padding-bottom: 10px;
+
+    &::placeholder {
+      color: $color-white;
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  &__textarea {
+    margin-top: 60px;
+    @include mobile{
+      margin-top: 30px;
+    }
+
+    label {
+      color: white;
+      font-size: 18px;
+    }
+
+    textarea {
+      margin-top: 15px;
+      padding: 10px;
+      font-size: 18px;
+      color: $color-white;
+      background: rgba(0, 0, 0, 0);
+      width: 100%;
+      min-height: 100px;
+      resize: none;
+      border: 0.5px solid $color-white;
+      border-radius: 3px;
+    }
+  }
+
+  &__cta-btn {
+    margin-top: 40px;
+    @include mobile{
+      margin-top: 20px;
+    }
+
+    .btn {
+      padding: 10px 40px;
+      @include mobile{
+        min-width: 100%;
+      }
+    }
+  }
+}
