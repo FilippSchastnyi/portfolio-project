@@ -65,9 +65,9 @@
   }
 
   &-up {
+    position: fixed;
     right: 70px;
     bottom: 60px;
-    position: fixed;
     z-index: 20;
     border-radius: inherit;
     background: #626161;
