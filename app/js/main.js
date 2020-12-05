@@ -21,6 +21,7 @@ import './src/widgets/mobile-menu';
 import './src/widgets/slider-bg';
 import './src/widgets/accord';
 import './src/widgets/scroll-to';
+import './src/widgets/scroll-up';
 
 import './src/widgets/inputs/numeric-input';
 import './src/widgets/inputs/masked-input';
