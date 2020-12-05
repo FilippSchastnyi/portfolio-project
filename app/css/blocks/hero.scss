@@ -175,12 +175,13 @@
 
   // slider settings //
   &__swiper-container {
-    position: relative;
+    width: 100%;
+    height: 100vh;
   }
 
   &__slide {
-    width: 100%;
-    height: 100vh;
+    position: relative;
+
 
     img {
       position: absolute;
