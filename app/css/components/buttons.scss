@@ -11,7 +11,7 @@
   appearance: none;
   cursor: pointer;
 
-  background: linear-gradient(180deg, #27214A 0%, rgba(118, 110, 162, 0) 100%), #27214A ;
+  background: linear-gradient(180deg, #27214A 0%, rgba(118, 110, 162, 0) 100%), #27214A;
   color: $color-white;
 
   &:hover {
@@ -48,7 +48,7 @@
     }
   }
 
-  &--white{
+  &--white {
     background: #FFFFFF;
     box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.25);
     color: $color-black;
@@ -62,5 +62,59 @@
   &--large {
     padding: 20px 25px;
     font-size: 20px;
+  }
+
+  &-up {
+    right: 70px;
+    bottom: 60px;
+    position: fixed;
+    z-index: 20;
+    border-radius: inherit;
+    background: #626161;
+    border: 1.175px solid #FFFFFF;
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 0;
+    visibility: hidden;
+    @include smallTablet-and-mobile {
+      right: 40px;
+      bottom: 40px;
+    }
+    @include mobile {
+      width: 60px;
+      height: 60px;
+      right: 20px;
+      bottom: 20px;
+      padding: 5px;
+    }
+
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &:hover {
+      animation: jello-horizontal 0.9s both;
+    }
+
+    .arrow {
+      background-color: #fff;
+      transform: rotate(90deg);
+      top: -15px;
+      left: 25%;
+
+      &:before, &:after {
+        background-color: #fff;
+      }
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 }
