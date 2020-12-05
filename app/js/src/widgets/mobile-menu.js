@@ -3,10 +3,12 @@ class MobileMenu {
     this.$container = nodeElement;
     this.$burgerButton = this.$container.querySelector('.js-burger-button');
     this.$asideMenu = document.querySelector('.js-aside');
+    this.$asideLink = this.$asideMenu.querySelectorAll('.js-item-bar');
 
     this.menuOpen = this.menuOpen.bind(this);
     this.menuClose = this.menuClose.bind(this);
     this.showHeaderMenu = this.showHeaderMenu.bind(this);
+    this.onAsideLinkClick = this.onAsideLinkClick.bind(this);
 
     this.init();
   }
@@ -20,12 +22,16 @@ class MobileMenu {
       if (window.pageYOffset < 200) {
         this.$container.classList.remove('pre-fixed');
       }
-      if (window.pageYOffset > section[0].scrollHeight-100) {
+      if (window.pageYOffset > section[0].scrollHeight - 100) {
         this.$container.classList.add('fixed');
       } else {
         this.$container.classList.remove('fixed');
       }
     }
+  }
+
+  onAsideLinkClick(event) {
+    this.menuClose();
   }
 
   menuClose() {
@@ -47,6 +53,9 @@ class MobileMenu {
 
   init() {
     this.$burgerButton.addEventListener('click', this.menuOpen);
+    this.$asideLink.forEach(item => {
+      item.addEventListener('click', this.onAsideLinkClick);
+    });
     window.addEventListener('scroll', this.showHeaderMenu);
   }
 }
