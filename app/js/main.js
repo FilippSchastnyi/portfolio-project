@@ -11,6 +11,7 @@ import './src/utils/preloader';
 import './src/utils/vh-hack';
 import './src/utils/mobile-debug';
 import './src/utils/input-filter';
+import './src/utils/scroll-to';
 
 import './src/widgets/example';
 
@@ -19,6 +20,7 @@ import './src/widgets/video-link';
 import './src/widgets/mobile-menu';
 import './src/widgets/slider-bg';
 import './src/widgets/accord';
+import './src/widgets/scroll-to';
 
 import './src/widgets/inputs/numeric-input';
 import './src/widgets/inputs/masked-input';

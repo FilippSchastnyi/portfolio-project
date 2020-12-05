@@ -20,7 +20,7 @@ class MobileMenu {
       if (window.pageYOffset < 200) {
         this.$container.classList.remove('pre-fixed');
       }
-      if (window.pageYOffset > section[0].scrollHeight) {
+      if (window.pageYOffset > section[0].scrollHeight-100) {
         this.$container.classList.add('fixed');
       } else {
         this.$container.classList.remove('fixed');
