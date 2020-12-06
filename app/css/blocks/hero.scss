@@ -1,7 +1,6 @@
 .hero {
   position: relative;
   min-height: 100vh;
-  width: 100%;
 
   &__bg {
     position: absolute;
@@ -39,8 +38,7 @@
   }
 
   &__inner {
-    position: absolute;
-    top: 0;
+    position: relative;
     z-index: 2;
     height: 100%;
     width: 100%;
@@ -177,19 +175,32 @@
 
   // slider settings //
   &__swiper-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
   }
 
-  img {
-    object-fit: cover;
-    height: 100%;
+  &__wrapper {
     width: 100%;
-    @include tablet-and-mobile {
-      object-position: 70% 0;
+    height: 100%;
+  }
+
+  &__slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      @include tablet-and-mobile {
+        object-position: 70% 0;
+      }
     }
   }
 
