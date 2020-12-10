@@ -12,8 +12,6 @@
     "prod": "gulp build-prod"
   },
   "keywords": [],
-  "author": "OZiTAG Ltd.",
-  "license": "ISC",
   "homepage": "https://gitlab.com/ozitag/internal-projects/html-starter/blob/master/README.md",
   "devDependencies": {
     "@babel/core": "^7.7.2",
