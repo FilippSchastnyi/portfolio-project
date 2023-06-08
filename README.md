@@ -1,4 +1,4 @@
-# DEPLOIED RESULT https://filippschastnyi.github.io/portfolio-project/html/home.html
+result https://filippschastnyi.github.io/portfolio-project/html/home.html
 
 # HTML Starter
 
