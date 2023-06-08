@@ -1,4 +1,4 @@
-result https://filippschastnyi.github.io/portfolio-project/html/home.html
+https://filippschastnyi.github.io/portfolio-project/html/home.html
 
 # HTML Starter
 
